@@ -1,0 +1,15 @@
+{
+  "thicknessOfSquares": 70,
+  "rows": 20,
+  "columns": 10,
+  "patterns": [
+    "L_Shape",
+    "S_Shape",
+    "Z_Shape",
+    "Rev_L_Shape",
+    "T_Shape",
+    "Square_Shape",
+    "I_Shape"
+  ],
+  "speed": 1.0
+}
