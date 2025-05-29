@@ -1,6 +1,7 @@
-package org.example.view;
+package org.example.view.styling;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -18,6 +19,17 @@ public class StyleUtils {
             public void mouseExited(MouseEvent e)  { b.setBackground(new Color(45, 45, 45)); }
         });
         return b;
+    }
+    public static void applyPanelStyle(JComponent c) {
+        c.setOpaque(true);
+        c.setBackground(new Color(40, 40, 40));
+        c.setBorder(new EmptyBorder(10, 10, 10, 10));
+    }
+
+    public static JPanel createStyledPanel(int rows, int cols, int hgap, int vgap) {
+        JPanel p = new JPanel(new GridLayout(rows,cols,hgap,vgap));
+        applyPanelStyle(p);
+        return p;
     }
 }
 

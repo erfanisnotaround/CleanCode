@@ -1,16 +1,22 @@
 package org.example.model.configKeepingAndLoading.constantsAndSettingThem;
 
+import org.example.model.Pattern;
 import org.example.model.configKeepingAndLoading.Patterns;
 import org.example.view.AppFrame;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Constants {
+    private boolean RotationAccess;
+    private int height;
+    private int width;
     private AppFrame MainFrame;
+    private int ThicknessOfSidePanel;
     private int ThicknessOfSquares;
     private int rows;
     private int columns;
-    private ArrayList<Patterns> patterns;
+    private List<Pattern> patterns;
     private double speed;
     private Constants() {}
     private static final Constants INSTANCE = new Constants();
@@ -34,11 +40,11 @@ public class Constants {
         this.columns = columns;
     }
 
-    public ArrayList<Patterns> getPatterns() {
+    public List<Pattern> getPatterns() {
         return patterns;
     }
 
-    public void setPatterns(ArrayList<Patterns> patterns) {
+    public void setPatterns(List<Pattern> patterns) {
         this.patterns = patterns;
     }
 
@@ -64,5 +70,37 @@ public class Constants {
 
     public void setMainFrame(AppFrame mainFrame) {
         MainFrame = mainFrame;
+    }
+
+    public int getThicknessOfSidePanel() {
+        return ThicknessOfSidePanel;
+    }
+
+    public void setThicknessOfSidePanel(int thicknessOfSidePanel) {
+        ThicknessOfSidePanel = thicknessOfSidePanel;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public boolean isRotationAccess() {
+        return RotationAccess;
+    }
+
+    public void setRotationAccess(boolean rotationAccess) {
+        RotationAccess = rotationAccess;
     }
 }

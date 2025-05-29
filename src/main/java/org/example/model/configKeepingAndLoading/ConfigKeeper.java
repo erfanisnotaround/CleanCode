@@ -1,12 +1,18 @@
 package org.example.model.configKeepingAndLoading;
 
+import org.example.model.Pattern;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConfigKeeper {
+    private int width;
+    private int height;
+    private int ThicknessOfSidePanel;
     private int ThicknessOfSquares;
     private int rows;
     private int columns;
-    private ArrayList<Patterns> patterns;
+    private List<Pattern> patterns;
     private double speed;
 
     public int getRows() {
@@ -25,11 +31,11 @@ public class ConfigKeeper {
         this.columns = columns;
     }
 
-    public ArrayList<Patterns> getPatterns() {
+    public List<Pattern> getPatterns() {
         return patterns;
     }
 
-    public void setPatterns(ArrayList<Patterns> patterns) {
+    public void setPatterns(List<Pattern> patterns) {
         this.patterns = patterns;
     }
 
@@ -47,5 +53,29 @@ public class ConfigKeeper {
 
     public void setThicknessOfSquares(int thicknessOfSquares) {
         ThicknessOfSquares = thicknessOfSquares;
+    }
+
+    public int getThicknessOfSidePanel() {
+        return ThicknessOfSidePanel;
+    }
+
+    public void setThicknessOfSidePanel(int thicknessOfSidePanel) {
+        ThicknessOfSidePanel = thicknessOfSidePanel;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 }

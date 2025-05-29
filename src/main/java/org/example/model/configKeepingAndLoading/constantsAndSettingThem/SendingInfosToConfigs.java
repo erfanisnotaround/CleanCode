@@ -15,5 +15,6 @@ public class SendingInfosToConfigs {
         constants.setPatterns(configKeeper.getPatterns());
         constants.setSpeed(configKeeper.getSpeed());
         constants.setThicknessOfSquares(configKeeper.getThicknessOfSquares());
+        constants.setThicknessOfSidePanel(configKeeper.getThicknessOfSidePanel());
     }
 }
