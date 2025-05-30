@@ -1,6 +1,6 @@
-package org.example.view;
+package org.example;
 
-import org.example.view.ui.UIManager;
+import org.example.view.ui.configurers.UIManager;
 
 import javax.swing.*;
 

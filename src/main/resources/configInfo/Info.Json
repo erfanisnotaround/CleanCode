@@ -1,6 +1,6 @@
 {
-  "width" : 0,
-  "height" : 0,
+  "width" : 600,
+  "height" : 600,
   "rows" : 20,
   "columns" : 10,
   "patterns" : [ {
@@ -33,6 +33,5 @@
     "patternY" : [ [ 1, 1, 0, 0 ], [ 0, 1, 1, 2 ], [ 1, 1, 0, 0 ], [ 0, 1, 1, 2 ] ]
   } ],
   "speed" : 300.0,
-  "thicknessOfSidePanel" : 0,
-  "thicknessOfSquares" : 30
+  "rotationAccess" : true
 }

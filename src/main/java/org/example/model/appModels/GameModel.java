@@ -1,6 +1,6 @@
-package org.example.model;
+package org.example.model.appModels;
 
-import org.example.model.configKeepingAndLoading.Patterns;
+import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Pattern;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
 
@@ -18,6 +18,7 @@ public class GameModel {
     private int score;
     private final CardLayout cardLayout;
     private final JPanel container;
+    private Pattern currentPattern;
 
     private static final Random RNG = new Random();
 
@@ -42,7 +43,9 @@ public class GameModel {
         angle = 0;
         String[] shapes = new String[Constants.getInstance().getPatterns().size()];
         makeShapes(shapes);
-        currentShape = shapes[RNG.nextInt(shapes.length)];
+        int n = RNG.nextInt(shapes.length);
+        currentShape = shapes[n];
+        currentPattern = Constants.getInstance().getPatterns().get(n);
     }
     public void makeShapes(String[] shapes) {
         List<Pattern> patterns = Constants.getInstance().getPatterns();
@@ -64,11 +67,11 @@ public class GameModel {
 
     public void moveLeft()  { if (canMove(x-1, y, angle)) x--; }
     public void moveRight() { if (canMove(x+1, y, angle)) x++; }
-    public void rotate()    { if (canMove(x, y, (angle+1)%4)) angle=(angle+1)%4; }
+    public void rotate()    { if (canMove(x, y, (angle+1)%4) && Constants.getInstance().isRotationAccess()) angle=(angle+1)%4; }
     public void rotateCCW() { if (canMove(x, y, (angle+3)%4)) angle=(angle+3)%4; }
 
     private boolean canMove(int nx, int ny, int na) {
-        Patterns pat = Patterns.valueOf(currentShape);
+        Pattern pat = currentPattern;
         int[] xs = pat.getPatternX()[na];
         int[] ys = pat.getPatternY()[na];
         for (int i = 0; i < 4; i++) {
@@ -81,7 +84,7 @@ public class GameModel {
     }
 
     private void lockPiece() {
-        Patterns pat = Patterns.valueOf(currentShape);
+        Pattern pat = currentPattern;
         int[] xs = pat.getPatternX()[angle];
         int[] ys = pat.getPatternY()[angle];
         for (int i = 0; i < 4; i++) {
@@ -128,11 +131,11 @@ public class GameModel {
 
     public boolean[][] getBoard()        { return board; }
     public int[] getShapeXs()            {
-        return Patterns.valueOf(currentShape)
+        return currentPattern
                 .getPatternX()[angle];
     }
     public int[] getShapeYs()            {
-        return Patterns.valueOf(currentShape)
+        return currentPattern
                 .getPatternY()[angle];
     }
     public void Back(){cardLayout.show(container , Screens.MENU.getName());}

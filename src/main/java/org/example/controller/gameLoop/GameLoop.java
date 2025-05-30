@@ -1,6 +1,6 @@
 package org.example.controller.gameLoop;
 
-import org.example.model.GameModel;
+import org.example.model.appModels.GameModel;
 
 import javax.swing.Timer;
 import java.util.ArrayList;

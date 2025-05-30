@@ -1,9 +1,9 @@
 package org.example.view.ui.configurers;
 
 import org.example.controller.sceneControllers.MenuController;
-import org.example.model.MenuModel;
+import org.example.model.appModels.MenuModel;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
-import org.example.view.AppFrame;
+import org.example.AppFrame;
 import org.example.view.menuView.MenuView;
 
 import javax.swing.*;

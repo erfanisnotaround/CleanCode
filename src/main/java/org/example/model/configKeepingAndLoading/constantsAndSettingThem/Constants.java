@@ -1,10 +1,7 @@
 package org.example.model.configKeepingAndLoading.constantsAndSettingThem;
 
-import org.example.model.Pattern;
-import org.example.model.configKeepingAndLoading.Patterns;
-import org.example.view.AppFrame;
+import org.example.AppFrame;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Constants {
@@ -12,7 +9,7 @@ public class Constants {
     private int height;
     private int width;
     private AppFrame MainFrame;
-    private int ThicknessOfSidePanel;
+    private int PrefersThicknessOfSidePanel = 100;
     private int ThicknessOfSquares;
     private int rows;
     private int columns;
@@ -72,14 +69,6 @@ public class Constants {
         MainFrame = mainFrame;
     }
 
-    public int getThicknessOfSidePanel() {
-        return ThicknessOfSidePanel;
-    }
-
-    public void setThicknessOfSidePanel(int thicknessOfSidePanel) {
-        ThicknessOfSidePanel = thicknessOfSidePanel;
-    }
-
     public int getHeight() {
         return height;
     }
@@ -102,5 +91,13 @@ public class Constants {
 
     public void setRotationAccess(boolean rotationAccess) {
         RotationAccess = rotationAccess;
+    }
+
+    public int getPrefersThicknessOfSidePanel() {
+        return PrefersThicknessOfSidePanel;
+    }
+
+    public void setPrefersThicknessOfSidePanel(int prefersThicknessOfSidePanel) {
+        PrefersThicknessOfSidePanel = prefersThicknessOfSidePanel;
     }
 }

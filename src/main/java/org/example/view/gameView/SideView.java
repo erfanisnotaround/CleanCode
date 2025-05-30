@@ -19,8 +19,8 @@ public class SideView extends GradientPanel {
         super(StartColor , EndColor);
         setLayout(new GridLayout(rows, cols, hgap, vgap));
         setPreferredSize(new Dimension(
-                Constants.getInstance().getThicknessOfSidePanel(),
-                0
+                Constants.getInstance().getPrefersThicknessOfSidePanel(),
+                Constants.getInstance().getPrefersThicknessOfSidePanel()
         ));
         scoreLbl.setHorizontalAlignment(SwingConstants.CENTER);
 

@@ -1,8 +1,6 @@
 package org.example;
 
-import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.SendingInfosToConfigs;
-import org.example.view.StartTheGame;
 
 import java.io.IOException;
 

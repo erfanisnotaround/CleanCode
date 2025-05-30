@@ -1,9 +1,9 @@
 package org.example.view.ui.configurers;
 
 import org.example.controller.sceneControllers.SettingController;
-import org.example.model.SettingsModel;
+import org.example.model.appModels.SettingsModel;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
-import org.example.view.AppFrame;
+import org.example.AppFrame;
 import org.example.view.settingsView.SettingView;
 
 import javax.swing.*;
@@ -17,7 +17,7 @@ public class SettingConfigurer implements ScreenConfigurer{
 
     @Override
     public void configure(AppFrame frame, JPanel container, CardLayout cards) {
-        SettingView view = new SettingView(9 , 2 , 10 , 20);
+        SettingView view = new SettingView();
         SettingsModel model = new SettingsModel(cards , container);
         SettingController controller = new SettingController(view , model);
         container.add(view , Screens.SETTINGS.getName());

@@ -14,7 +14,10 @@ public class SendingInfosToConfigs {
         constants.setRows(configKeeper.getRows());
         constants.setPatterns(configKeeper.getPatterns());
         constants.setSpeed(configKeeper.getSpeed());
-        constants.setThicknessOfSquares(configKeeper.getThicknessOfSquares());
-        constants.setThicknessOfSidePanel(configKeeper.getThicknessOfSidePanel());
+//        constants.setThicknessOfSquares(configKeeper.getThicknessOfSquares());
+//        constants.setThicknessOfSidePanel(configKeeper.getThicknessOfSidePanel());
+        constants.setHeight(configKeeper.getHeight());
+        constants.setWidth(configKeeper.getWidth());
+        constants.setRotationAccess(configKeeper.isRotationAccess());
     }
 }

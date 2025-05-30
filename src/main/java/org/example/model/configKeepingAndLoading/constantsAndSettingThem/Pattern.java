@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.configKeepingAndLoading.constantsAndSettingThem;
 
 public class Pattern {
     private String name;

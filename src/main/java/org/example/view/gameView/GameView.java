@@ -24,7 +24,7 @@ public class GameView extends JPanel {
     public void render(boolean[][] board,
                        int[] pieceXs, int[] pieceYs,
                        int shapeX, int shapeY,
-                       int angle /*unused here*/) {
+                       int angle ) {
         this.board   = board;
         this.pieceXs = pieceXs;
         this.pieceYs = pieceYs;

@@ -1,10 +1,9 @@
-package org.example.model;
+package org.example.model.appModels;
 
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
-import org.example.view.AppFrame;
+import org.example.AppFrame;
 
 import javax.swing.*;
-import javax.swing.text.Caret;
 import java.awt.*;
 
 public class MenuModel {

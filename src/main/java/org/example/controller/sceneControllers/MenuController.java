@@ -1,6 +1,6 @@
 package org.example.controller.sceneControllers;
 
-import org.example.model.MenuModel;
+import org.example.model.appModels.MenuModel;
 import org.example.view.menuView.MenuView;
 
 public class MenuController {

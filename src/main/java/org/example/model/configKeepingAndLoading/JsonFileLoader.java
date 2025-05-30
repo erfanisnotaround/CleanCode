@@ -7,7 +7,7 @@ import java.io.IOException;
 public class JsonFileLoader {
     String path;
     JsonManager jsonManager;
-    String configPath = "src/main/resources/configInfo/Info.Json";
+    String configPath = "D:/programming/cleanCodeAp/cleacnCoe/cleacnCode/untitled/src/main/resources/configInfo/Info.Json";
     public ConfigKeeper LoadConfig() throws IOException {
         jsonManager = new JsonManager(configPath);
         ConfigKeeper configKeeper = jsonManager.readObject(ConfigKeeper.class);

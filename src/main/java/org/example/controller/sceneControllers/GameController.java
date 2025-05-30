@@ -1,15 +1,13 @@
 package org.example.controller.sceneControllers;
 
-import org.example.model.GameModel;
+import org.example.model.appModels.GameModel;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants;
-import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
 import org.example.view.gameView.GameView;
 import org.example.view.gameView.SideView;
 import org.example.controller.gameLoop.GameLoop;
 import org.example.controller.gameLoop.GameLoopListener;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class GameController implements KeyListener {
@@ -57,6 +55,7 @@ public class GameController implements KeyListener {
             }
         });
         side.OnBack(e -> {
+            loop.stop();
             model.Back();
         });
 

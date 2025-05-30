@@ -1,12 +1,8 @@
-package org.example.view.ui;
+package org.example.view.ui.configurers;
 
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants;
 import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Screens;
-import org.example.view.AppFrame;
-import org.example.view.ui.configurers.GameConfigurer;
-import org.example.view.ui.configurers.MenuConfigurer;
-import org.example.view.ui.configurers.ScreenConfigurer;
-import org.example.view.ui.configurers.SettingConfigurer;
+import org.example.AppFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,15 +27,10 @@ public class UIManager {
         frame.setUndecorated(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        int w = org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants
-                .getInstance().getColumns()
-                * org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants
-                .getInstance().getThicknessOfSquares()
-                +Constants.getInstance().getThicknessOfSidePanel();
-        int h = org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants
-                .getInstance().getRows()
-                * org.example.model.configKeepingAndLoading.constantsAndSettingThem.Constants
-                .getInstance().getThicknessOfSquares();
+        int w = Constants.getInstance().getWidth();
+        int h = Constants.getInstance().getHeight();
+        Constants.getInstance().setThicknessOfSquares(h / Constants.getInstance().getRows());
+        Constants.getInstance().setPrefersThicknessOfSidePanel(w - Constants.getInstance().getColumns()*Constants.getInstance().getThicknessOfSquares());
         frame.setSize(w, h);
         frame.setLocationRelativeTo(null);
         Constants.getInstance().setMainFrame(frame);

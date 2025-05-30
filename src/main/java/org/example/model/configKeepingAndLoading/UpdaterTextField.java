@@ -1,9 +1,8 @@
-package org.example.model;
+package org.example.model.configKeepingAndLoading;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.Document;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 

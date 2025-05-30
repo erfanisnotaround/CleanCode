@@ -1,19 +1,17 @@
 package org.example.model.configKeepingAndLoading;
 
-import org.example.model.Pattern;
+import org.example.model.configKeepingAndLoading.constantsAndSettingThem.Pattern;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ConfigKeeper {
     private int width;
     private int height;
-    private int ThicknessOfSidePanel;
-    private int ThicknessOfSquares;
     private int rows;
     private int columns;
     private List<Pattern> patterns;
     private double speed;
+    private boolean RotationAccess;
 
     public int getRows() {
         return rows;
@@ -46,22 +44,22 @@ public class ConfigKeeper {
     public void setSpeed(double speed) {
         this.speed = speed;
     }
-
-    public int getThicknessOfSquares() {
-        return ThicknessOfSquares;
-    }
-
-    public void setThicknessOfSquares(int thicknessOfSquares) {
-        ThicknessOfSquares = thicknessOfSquares;
-    }
-
-    public int getThicknessOfSidePanel() {
-        return ThicknessOfSidePanel;
-    }
-
-    public void setThicknessOfSidePanel(int thicknessOfSidePanel) {
-        ThicknessOfSidePanel = thicknessOfSidePanel;
-    }
+//
+//    public int getThicknessOfSquares() {
+//        return ThicknessOfSquares;
+//    }
+//
+//    public void setThicknessOfSquares(int thicknessOfSquares) {
+//        ThicknessOfSquares = thicknessOfSquares;
+//    }
+//
+//    public int getThicknessOfSidePanel() {
+//        return ThicknessOfSidePanel;
+//    }
+//
+//    public void setThicknessOfSidePanel(int thicknessOfSidePanel) {
+//        ThicknessOfSidePanel = thicknessOfSidePanel;
+//    }
 
     public int getWidth() {
         return width;
@@ -77,5 +75,13 @@ public class ConfigKeeper {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public boolean isRotationAccess() {
+        return RotationAccess;
+    }
+
+    public void setRotationAccess(boolean rotationAccess) {
+        RotationAccess = rotationAccess;
     }
 }
